@@ -40,11 +40,11 @@ class ArgumentsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("--test 'value'", (string) $argumentList, 'ArgumentList should remove duplicates');
     }
 
-    public function testOverwriteArguments()
+    public function testAddMultipleArgumentsArguments()
     {
         $argumentList = new ArgumentList();
         $argumentList->addArgument(new Argument('test', 'value'));
         $argumentList->addArgument(new Argument('test', 'value2'));
-        $this->assertEquals("--test 'value2'", (string) $argumentList, 'ArgumentList should overwrite new values');
+        $this->assertEquals("--test 'value' --test 'value2'", (string) $argumentList, 'ArgumentList should overwrite new values');
     }
 }

@@ -15,6 +15,6 @@ class Arguments
 
     public function addArgument(Argument $argument)
     {
-        $this->arguments[$argument->getName()] = $argument;
+        $this->arguments[md5((string) $argument)] = $argument;
     }
 }
