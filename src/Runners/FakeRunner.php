@@ -4,7 +4,6 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 use AdamBrett\ShellWrapper\ExitCodes;
-use Runners\RunnerWithStandardOut;
 
 class FakeRunner implements RunnerWithStandardOut, ReturnValue, StandardError
 {

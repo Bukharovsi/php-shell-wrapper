@@ -6,11 +6,8 @@
  * Time: 12:58
  */
 
-namespace Runners;
+namespace AdamBrett\ShellWrapper\Runners;
 
-
-use AdamBrett\ShellWrapper\Runners\Runner;
-use AdamBrett\ShellWrapper\Runners\StandardOut;
 
 interface RunnerWithStandardOut extends Runner, StandardOut
 {
