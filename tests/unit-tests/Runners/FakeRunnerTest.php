@@ -11,14 +11,14 @@ namespace AdamBrett\ShellWrapper\Tests\Runners;
 
 use AdamBrett\ShellWrapper\Command;
 use AdamBrett\ShellWrapper\ExitCodes;
-use AdamBrett\ShellWrapper\Runners\FakeRunner;
+use AdamBrett\ShellWrapper\Runners\FakeReturnedValueRunner;
 
 class FakeRunnerTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testExecution()
     {
-        $runner = new FakeRunner();
+        $runner = new FakeReturnedValueRunner();
         $returnedValue = $runner->run(new Command('ls'));
 
         static::assertEquals(0, $returnedValue);
@@ -30,7 +30,7 @@ class FakeRunnerTest extends \PHPUnit_Framework_TestCase
     {
         $outMsg = 'in processing...';
         $errMsg = 'command terminated unexpectedly';
-        $runner = new FakeRunner(ExitCodes::USER_TERMINATED, $outMsg, $errMsg);
+        $runner = new FakeReturnedValueRunner(ExitCodes::USER_TERMINATED, $outMsg, $errMsg);
 
         $runner->run(new Command('ls'));
 

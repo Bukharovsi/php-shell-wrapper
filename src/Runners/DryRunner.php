@@ -5,7 +5,7 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 
-class DryRunner extends FakeRunner
+class DryRunner extends FakeReturnedValueRunner
 {
     public function run(CommandInterface $command)
     {

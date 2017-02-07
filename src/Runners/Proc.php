@@ -4,7 +4,7 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 
-class Proc implements Runner, ReturnValue, StandardOut, StandardError
+class Proc implements ReturnedValueRunnerWithStreams
 {
     private $stdout;
     private $stderr;

@@ -4,7 +4,8 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 
-class System implements Runner, ReturnValue
+
+class System implements ReturnedValueRunner
 {
     protected $returnValue;
 

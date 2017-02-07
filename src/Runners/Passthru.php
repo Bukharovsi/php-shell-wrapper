@@ -4,7 +4,7 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 
-class Passthru implements Runner, ReturnValue
+class Passthru implements ReturnedValueRunner
 {
     protected $returnValue;
 

@@ -5,7 +5,7 @@ namespace AdamBrett\ShellWrapper\Runners;
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 use AdamBrett\ShellWrapper\ExitCodes;
 
-class FakeRunner implements RunnerWithStandardOut, ReturnValue, StandardError
+class FakeReturnedValueRunner implements ReturnedValueRunnerWithStreams
 {
     private $outputValue;
 

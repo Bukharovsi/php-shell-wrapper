@@ -9,7 +9,7 @@
 namespace AdamBrett\ShellWrapper\Runners;
 
 
-interface RunnerWithStandardOut extends Runner, StandardOut
+interface ReturnedValueRunnerWithStreams extends ReturnedValueRunner, StandardOut, StandardError
 {
 
 }
