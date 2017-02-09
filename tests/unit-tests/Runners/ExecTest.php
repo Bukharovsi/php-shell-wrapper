@@ -18,7 +18,7 @@ class ExecTest extends \PHPUnit_Framework_TestCase
     {
         $shell = new Exec();
         $shell->run(new Command('ls'));
-        $this->assertNotEmpty($shell->getOutput(), 'The should be some output');
+        $this->assertNotEmpty($shell->getStandardOut(), 'The should be some output');
     }
 
     public function testCanGetReturnValue()

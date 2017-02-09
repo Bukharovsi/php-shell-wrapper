@@ -50,12 +50,12 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testCanOverrideArguments()
+    public function testAddMultipleArgumentsWithSameName()
     {
         $command = new Command('ls');
         $command->addArgument(new Argument('test', 'value'));
         $command->addArgument(new Argument('test', 'value2'));
-        $this->assertEquals("ls --test 'value2'", (string) $command, 'Arguments should be overwritten');
+        $this->assertEquals("ls --test 'value' --test 'value2'", (string) $command, 'Arguments should be overwritten');
     }
 
     public function testCanAddFlag()

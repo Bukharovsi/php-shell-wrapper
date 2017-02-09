@@ -4,7 +4,7 @@ namespace AdamBrett\ShellWrapper\Runners;
 
 use AdamBrett\ShellWrapper\Command\CommandInterface;
 
-class Exec implements Runner, ReturnValue
+class Exec implements RunnerWithStandardOut
 {
     protected $output;
     protected $returnValue;
@@ -14,7 +14,7 @@ class Exec implements Runner, ReturnValue
         return exec($command, $this->output, $this->returnValue);
     }
 
-    public function getOutput()
+    public function getStandardOut()
     {
         return $this->output;
     }
